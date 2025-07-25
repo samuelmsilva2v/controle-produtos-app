@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-consulta',
-  imports: [],
+  standalone: false,
   templateUrl: './consulta.html',
   styleUrl: './consulta.css'
 })

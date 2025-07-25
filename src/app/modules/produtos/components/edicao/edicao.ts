@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-edicao',
-  imports: [],
+  standalone: false,
   templateUrl: './edicao.html',
   styleUrl: './edicao.css'
 })
