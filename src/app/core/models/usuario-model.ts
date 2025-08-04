@@ -2,6 +2,7 @@ export interface UsuarioModel {
     id: string;
     nome: string;
     email: string;
-    accessToken: string;
+    perfil: string;
+    token: string;
     dataHoraExpiracao: Date | string;
 }

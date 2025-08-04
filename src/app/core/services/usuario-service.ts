@@ -5,8 +5,11 @@ import { UsuarioModel } from "../models/usuario-model";
     providedIn: 'root'
 }) 
 export class UsuarioService {
+
+    private key: string = 'auth';
     
     salvarAutenticacao(usuario: UsuarioModel) {
-        // TODO: implementar
+        const json = JSON.stringify(usuario);
+        sessionStorage.setItem(this.key, json);
     }
 }

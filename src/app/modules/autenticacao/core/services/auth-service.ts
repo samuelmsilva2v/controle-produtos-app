@@ -24,8 +24,9 @@ export class AuthService {
                     id: response.id,
                     nome: response.nome,
                     email: response.email,
-                    dataHoraExpiracao: response.dataHoraExpiricacao,
-                    accessToken: response.accessToken
+                    perfil: response.perfil,
+                    dataHoraExpiracao: response.dataHoraExpiracacao,
+                    token: response.token
                 };
                 this.usuarioService.salvarAutenticacao(usuario);
             })

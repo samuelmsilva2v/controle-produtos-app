@@ -1,3 +1,15 @@
-<button mat-raised-button color="primary">
-    Botão Angular Material
-</button>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div>
+        <label>Email do usuário:</label>
+        <input type="text" formControlName="email" />
+    </div>
+    
+    <div>
+        <label>Senha do usuário:</label>
+        <input type="password" formControlName="senha" />
+    </div>
+
+    <div>
+        <input type="submit" value="Entrar" />
+    </div>
+</form>

@@ -2,8 +2,8 @@ export interface AuthResponseDto {
     id: string;
     nome: string;
     email: string;
-    foto: string;
+    perfil: string;
     dataHoraAcesso: Date | string;
-    accessToken: string;
-    dataHoraExpiricacao: Date | string;
+    dataHoraExpiracacao: Date | string;
+    token: string;
 }
