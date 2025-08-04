@@ -4,8 +4,8 @@ import { AuthRequestDto } from "../dtos/auth-request-dto";
 import { Observable, tap } from "rxjs";
 import { AuthResponseDto } from "../dtos/auth-response-dto";
 import { UsuarioService } from "../../../../core/services/usuario-service";
-import { environment } from "../../../../../environments/environment";
 import { UsuarioModel } from "../../../../core/models/usuario-model";
+import { environment } from "../../../../../environments/environment";
 
 @Injectable({
     providedIn: 'root'
@@ -28,7 +28,7 @@ export class AuthService {
                     dataHoraExpiracao: response.dataHoraExpiracacao,
                     token: response.token
                 };
-                this.usuarioService.salvarAutenticacao(usuario);
+                this.usuarioService.signIn(usuario);
             })
         )
     }

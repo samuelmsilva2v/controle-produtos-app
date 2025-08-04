@@ -1,7 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { AuthService } from '../../core/services/auth-service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { AuthRequestDto } from '../../core/dtos/auth-request-dto';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,8 +14,10 @@ export class Login {
 
   private authService = inject(AuthService);
   private fb = inject(FormBuilder);
+  private router = inject(Router);
 
   form!: FormGroup;
+  mensagem = signal('');
 
   ngOnInit() {
     this.form = this.fb.group({
@@ -31,10 +34,12 @@ export class Login {
 
     this.authService.login(request).subscribe({
       next: (data) => { 
-        console.log(data); 
+        next: () => {
+          this.router.navigate(['/dashboard/relatorios'])
+        }
       },
       error: (e) => { 
-        console.log(e.error )
+        console.log(e.error.message)
       }
     })
   }
