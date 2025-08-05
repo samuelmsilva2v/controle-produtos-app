@@ -1,0 +1,50 @@
+.login-card {
+    max-width: 420px;
+    margin: 60px auto;
+    padding: 32px 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    border: 1px solid #CCC;
+}
+
+mat-card-title {
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 2px;
+}
+
+mat-card-subtitle {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.actions {
+    margin-top: 4px;
+}
+
+.actions .full-width {
+    width: 100%;
+}
+
+.error-message {
+    text-align: center;
+    color: #d32f2f;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 8px;
+}

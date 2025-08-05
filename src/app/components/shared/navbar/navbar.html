@@ -1,0 +1,23 @@
+<mat-toolbar color="primary" class="mat-elevation-z6">
+
+    <span class="logo" routerLink="/">Controle de produtos</span>
+    <span class="spacer"></span>
+
+    <nav>
+        <a mat-button routerLink="/dashboard/relatorios" routerLinkActive="active-link">Dashboard</a>
+        <a mat-button routerLink="/estoques/consulta" routerLinkActive="active-link">Estoques</a>
+        <a mat-button routerLink="/produtos/consulta" routerLinkActive="active-link">Produtos</a>
+    </nav>
+
+    <span class="spacer"></span>
+
+    <span class="usuario-info" *ngIf="nomeUsuario">
+        <mat-icon>account_circle</mat-icon>
+        {{ nomeUsuario }}
+    </span>
+
+    <button mat-icon-button color="warn" (click)="logout()" aria-label="Logout">
+        <mat-icon>logout</mat-icon>
+    </button>
+    
+</mat-toolbar>

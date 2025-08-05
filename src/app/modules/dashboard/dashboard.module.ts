@@ -1,14 +1,14 @@
 import { NgModule } from "@angular/core";
 import { Relatorios } from "./components/relatorios/relatorios";
 import { DashboardRoutingModule } from "./dashboard-routing.module";
+import { Navbar } from "../../components/shared/navbar/navbar";
 
 @NgModule({
     declarations: [
-        //Adicionar componentes do módulo
         Relatorios
     ],
     imports: [
-        //Adicionar módulos necessários
+        Navbar,
         DashboardRoutingModule
     ]
 })
